@@ -1,6 +1,7 @@
 Covered Features:
 
-1. String Function Of SASS,
+1. String Function Of SASS
+
  i. quote()
  ii. unquote()
  iii. str-index()
@@ -10,7 +11,8 @@ Covered Features:
  vii. to-lower-case()
  viii. unique-id()
  
-2. colour Function of SASS,
+2. colour Function of SASS
+
   i. lighten()
   ii. darken()
   iii. adjust-hue()
@@ -19,7 +21,8 @@ Covered Features:
   vi. mix()
   vii. transparentize()
   
-3. List function in SASS,
+3. List function in SASS
+
   i. length()
   ii. nth()
   iii. set-nth()
@@ -30,7 +33,8 @@ Covered Features:
   vii. list-separator()
   viii. is-bracketed()
   
-4. Selector function of SASS,
+4. Selector function of SASS
+
   i. selector-nest()
   ii. selector-append()
   iii. selector-replace()
@@ -39,7 +43,8 @@ Covered Features:
   vii. selector-unify()
   viii. selector-extend()
   
-5. Map function of SASS,
+5. Map function of SASS
+
  i.Map function of SASS
  ii. map-get
 iii.  map-merge
@@ -48,7 +53,8 @@ v. map-keys
 vi. map-value
 vii. map-has-key
 
-6. Introspection Function of SASS,
+6. Introspection Function of SASS
+
  i. Introspection Function of SASS
  ii. variable-exists()
 iii. global-variable-exists()
