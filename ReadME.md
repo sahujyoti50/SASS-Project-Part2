@@ -15,4 +15,4 @@ Covered Features:
 
 Preview:
 
-![image](https://user-images.githubusercontent.com/15225177/230076122-33623894-1c72-4189-825b-1cbedeb7665b.png)
+![image](https://user-images.githubusercontent.com/15225177/230076245-679db68c-687c-494f-a29d-74d75811e3e5.png)
