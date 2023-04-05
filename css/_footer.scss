@@ -1,0 +1,40 @@
+//footer
+
+%footBase{
+    display: flex;
+    justify-content: space-between;
+    align-items: $center_item;
+    background-color: #302f49;
+}
+.footer {
+  @extend %footBase;
+    .copy {
+        color: $text-color;
+    }
+}
+
+.bottom-links {
+   @extend %footBase;
+    padding: 10px 0;
+
+    .links {
+        display: inline;
+        flex-direction: column;
+        justify-content: $center_item;
+        align-items: $center_item;
+        padding: 0 40px;
+
+        span {
+            font-size: 20px;
+            color: $text-color;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+            padding: 10px 20px;
+        }
+    }
+}

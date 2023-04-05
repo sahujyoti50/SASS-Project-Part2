@@ -1,0 +1,57 @@
+$width:1500;
+.main {
+    display: inline-flex;
+    width: $width;
+    height: 200px;
+    background-color: orange;
+    border: 2px solid orangered;
+    margin-left: 100px;
+}
+
+@function oneThirdWidth($value) {
+    @return ($value/3)+px;
+}
+
+@function fullHeight($value) {
+    @return $value + px;
+}
+
+.child1,
+.child2,
+.child3 {
+    width: oneThirdWidth($width);
+    height: fullHeight(180);
+    background-color: greenyellow;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: red;
+    }
+
+    li {
+        display: inline-block;
+
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+
+    }
+}

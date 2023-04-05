@@ -1,0 +1,78 @@
+//Main css
+
+@mixin padding($top, $right, $bottom, $left) {
+    // @mixin padding($top:40px, $right:80px, $bottom:40px, $left:80px) {
+    //if we dont pass parameter it will give error,to overcome that we can provide default value as above
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: $center_item;
+    @include padding(40px, 80px, 40px, 80px);
+    // @include padding();//will take default value if parameter has not provided
+
+    .work {
+        display: flex;
+        flex-direction: column;
+        justify-content: $center_item;
+        align-items: $center_item;
+        padding: 0 40px;
+
+        i {
+            width: fit-content;
+            font-size: 50px;
+            color: #333333;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            padding: 12px;
+        }
+
+        .work-heading {
+            font-size: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .work-text {
+            font-size: 15px;
+            color: #585858;
+            margin: 10px 0;
+        }
+    }
+}
+
+.about-me {
+    display: flex;
+    justify-content: $center_item;
+    align-items: $center_item;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+
+    img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+.about-me-text {
+    h2 {
+        font-size: 30px;
+        color: #333333;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    p {
+        font-size: 15px;
+        color: #585858;
+        margin: 10px 0;
+    }
+}

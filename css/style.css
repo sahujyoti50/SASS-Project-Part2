@@ -1,0 +1,33 @@
+.main {
+  display: inline-flex;
+  width: 1500;
+  height: 200px;
+  background-color: orange;
+  border: 2px solid orangered;
+  margin-left: 100px;
+}
+
+.child1,
+.child2,
+.child3 {
+  width: 500px;
+  height: 180px;
+  background-color: greenyellow;
+  margin: 10px;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: red;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #302f49;
+}
+.header .logo {
+  font-size: 25px;
+  font-family: "Sriracha", cursive;
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #302f49;
+  margin-right: 20px;
+}
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+}
+.nav-items a:hover {
+  background-color: rgb(67, 64, 64);
+  color: white;
+}
+
+.achievements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  margin-right: 80px;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+.achievements .work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+.achievements .work i {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 50px;
+  color: #333333;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  padding: 12px;
+}
+.achievements .work .work-heading {
+  font-size: 20px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.achievements .work .work-text {
+  font-size: 15px;
+  color: #585858;
+  margin: 10px 0;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-top: 2px solid #eeeeee;
+}
+.about-me img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-me-text h2 {
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+}
+.about-me-text p {
+  font-size: 15px;
+  color: #585858;
+  margin: 10px 0;
+}
+
+.bottom-links, .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #302f49;
+}
+
+.footer .copy {
+  color: white;
+}
+
+.bottom-links {
+  padding: 10px 0;
+}
+.bottom-links .links {
+  display: inline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+.bottom-links .links span {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.bottom-links .links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}/*# sourceMappingURL=home.css.map */

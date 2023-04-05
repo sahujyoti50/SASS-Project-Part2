@@ -1,0 +1,41 @@
+//header css
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: $center_item;
+    background-color: #302f49;
+
+    .logo {
+        font-size: 25px;
+        font-family: 'Sriracha', cursive;
+        color: $text-color;
+        text-decoration: none;
+        margin-left: 30px;
+    }
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: $center_item;
+    background-color: #302f49;
+    margin-right: 20px;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        padding: 15px 20px;
+
+        //for css selector we have to use '&'
+        &:hover {
+            background-color: rgb(67, 64, 64);
+            color: $text-color;
+        }
+    }
+
+}

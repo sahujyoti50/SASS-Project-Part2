@@ -1,0 +1,229 @@
+$string: Helvetica;
+
+.test {
+    // 8 String Function Of SASS
+    text-transform: quote($string); //1
+    display: unquote($string);
+    padding: str-index("Helvetica Neue", "Helvetica");
+    margin: str-length("Helvetica Neue");
+    font-family: str-slice("Helvetica Neue", 11);
+    text-transform: to-upper-case("Bold");
+    text-transform: to-lower-case("BOLD");
+    margin: unique-id();
+}
+
+//for loop
+$color: 10px;
+
+@for $i from 1 through 3 {
+    .test-#{$i} {
+        font-size: $color * $i;
+    }
+}
+
+// Color function of SASS
+$basecolor: green;
+
+#first,
+#second,
+#third,
+#fourth,
+#fifth,
+#six,
+#seven,
+#eight {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+#first {
+    background: $basecolor;
+}
+
+#second {
+    background: lighten($basecolor, 10);
+}
+
+#third {
+    background: darken($basecolor, 20);
+}
+
+#fourth {
+    background: adjust-hue($basecolor, 30);
+}
+
+#fifth {
+    background: saturate($basecolor, 20%);
+}
+
+#six {
+    background: desaturate($basecolor, 50);
+}
+
+#seven {
+    background: mix(red, yellow);
+}
+
+#eight {
+    background: transparentize($basecolor, 0.5);
+}
+
+// List function in SASS
+$list: 10px 20px 30px;
+$list2:40px ,50px ,60px;
+
+.test2 {
+    padding: length($list);
+    padding: nth(10px 12px 16px, 2);
+    padding: set-nth(10px 20px 30px, 1, 2em);
+    padding: join($list, $list2);
+    padding:append($list,60px);
+    padding: zip($list, $list2);
+    padding:index(10px 12px 16px, 10px);
+    padding:list-separator($list);
+    padding:is-bracketed($list);
+    padding:is-bracketed($list2);
+
+}
+// Selector function of SASS
+$selector:selector-nest("ul", "li"); 
+$selector1:selector-append("a", ".disabled");
+$selector2:selector-replace("a.disabled", "a", ".link");
+$selector3:is-superselector("a", "a.disabled");
+$selector4:simple-selectors("a.disabled");
+$selector5:selector-unify("a", ".disabled");
+$selector6:selector-extend("a.disabled", "a", ".link");
+
+#{$selector}{
+   width:100px;
+}
+#{$selector1}{
+    width:100px;
+ }
+ #{$selector2}{
+    width:100px;
+    display: $selector3;
+ }
+ #{$selector4}{
+    width:100px;
+ }
+ #{$selector5}{
+    width:100px;
+ }
+ #{$selector6}{
+    width:100px;
+ }
+
+// Map function of SASS
+// map-get
+// map-merge
+// map-remove
+// map-keys
+// map-value
+// map-has-key
+$font-weights: (
+    "regular": 400px,
+    "medium": 500px,
+    "bold": 700px
+);
+$light-weights: (
+    "lightest": 100,
+    "light": 300
+);
+$heavy-weights: (
+    "medium": 500,
+    "bold": 700
+);
+$merge: map-merge($light-weights, $heavy-weights);
+$rm: map-remove($font-weights, "regular");
+
+
+.test4 {
+    padding: map-get($font-weights, "medium");
+    margin: map-values($merge);
+    padding: map-values($rm);
+    margin: map-keys($font-weights);
+    margin: map-values($font-weights);
+    display: map-has-key($light-weights,"light");
+}
+// Introspection Function of SASS
+// variable-exists()
+// global-variable-exists()
+// mixin-exists()
+// function-exists()
+// type-of()
+// inspect()
+
+// @content
+@mixin hover {
+    &:not([disabled]):hover {
+      @content;
+    }
+  }
+
+// @media
+  .button {
+    border: 1px solid black;
+    @include hover {
+      border-width: 2px;
+    }
+  }
+.container{
+    width:100px;
+    margin:0px solid;
+    @media screen and (max-width:500px){
+        background-color: green;
+    }
+    @media screen and (max-width:1000px){
+        background-color: red;
+    }
+}
+// @at-root
+.item {
+    color: red;
+
+    @at-root {
+        .item-container {
+            color: green;
+
+            @at-root {
+                a {
+                    color: blueviolet
+                }
+            }
+        }
+
+    }
+}
+// If and else
+$test: 20px;
+
+p {
+    @if $test<5 {
+        color: blue
+    }
+
+    @else if $test < 10 {
+        color: pink
+    }
+
+    @else if $test < 20 {
+        color: gray
+    }
+
+    @else {
+        color: red
+    }
+}
+// @while loop
+$i: 10;
+
+@while($i<30) {
+    .pad-#{$i} {
+        padding: 100+$i;
+    }
+
+    $i: $i+10;
+}
